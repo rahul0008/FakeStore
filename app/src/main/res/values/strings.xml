@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">FakeStore</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title">Title</string>
+    <string name="average_rating">Average Rating</string>
+    <string name="description">Description</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="Rs">\u20B9</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titleFront">Title :</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="add_product">ADD PRODUCT</string>
+    <string name="price">Price</string>
+    <string name="enter_price">Enter Price</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="category">Category</string>
+    <string name="enter_category">Enter Category</string>
+</resources>

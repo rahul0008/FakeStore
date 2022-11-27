@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentCategory">
+    <fragment
+        android:id="@+id/fragmentProducts"
+        android:name="com.example.fakestore.ui.products.FragmentProducts"
+        android:label="fragment_fragment_products"
+        tools:layout="@layout/fragment_fragment_products" >
+        <action
+            android:id="@+id/action_fragmentProducts_to_fragmentProductDetails"
+            app:destination="@id/fragmentProductDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProductDetails"
+        android:name="com.example.fakestore.ui.productDetails.FragmentProductDetails"
+        android:label="fragment_fragment_product_details"
+        tools:layout="@layout/fragment_fragment_product_details" />
+    <fragment
+        android:id="@+id/fragmentCategory"
+        android:name="com.example.fakestore.ui.category.FragmentCategory"
+        android:label="fragment_fragment_category"
+        tools:layout="@layout/fragment_fragment_category" >
+        <action
+            android:id="@+id/action_fragmentCategory_to_fragmentProducts"
+            app:destination="@id/fragmentProducts" />
+    </fragment>
+</navigation>
