@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.example.fakestore.server.entity.Product
 import com.example.fakestore.server.handlers.RepositoryCallback
 import com.example.fakestore.server.handlers.RequestProduct
+import com.example.fakestore.server.handlers.ResultProduct
 import com.example.fakestore.server.repository.ProductRepository
 
 class MainActivityViewModel : ViewModel() {
@@ -31,7 +32,6 @@ class MainActivityViewModel : ViewModel() {
         override fun onComplete(result: Result<ArrayList<Product>>) {
             result.onSuccess {
                 Log.i(TAG, "onComplete: receivedData")
-                _message.postValue("SuccessFull")
                 _products.postValue(it as ArrayList<Product>)
             }
         }
@@ -42,10 +42,20 @@ class MainActivityViewModel : ViewModel() {
 
     }
 
-    fun addProduct(product: RequestProduct) {
+    fun addProduct(product: RequestProduct,addProductRepositoryCallback:RepositoryCallback<ResultProduct>) {
         productRepository.addProducts(product, addProductRepositoryCallback)
     }
 
+    fun deleteProduct(id: Int?, addProductRepositoryCallback:RepositoryCallback<Product>) {
+        id?.let { productRepository.deleteProducts(it, addProductRepositoryCallback) }
+    }
+    fun updateProduct(id: Int?,requestProduct: RequestProduct, updateProductRepositoryCallback:RepositoryCallback<Product>) {
+        id?.let { productRepository.updateProducts(it,requestProduct, updateProductRepositoryCallback) }
+    }
+
+    fun removeProduct(product: Product){
+        _products.value?.remove(product)
+    }
     fun getCategory(products: ArrayList<Product>): ArrayList<String> {
         var categories: ArrayList<String> = ArrayList()
         for (product in products) {
@@ -68,19 +78,5 @@ class MainActivityViewModel : ViewModel() {
 
         _productsCategory.postValue(returnProducts)
     }
-
-    var addProductRepositoryCallback = object : RepositoryCallback<String> {
-        override fun onComplete(result: Result<String>) {
-            result.onSuccess {
-                _message.postValue(it + "is added to list")
-            }
-        }
-
-        override fun onError(errorMessage: String) {
-            _message.postValue(errorMessage)
-        }
-
-    }
-
 
 }

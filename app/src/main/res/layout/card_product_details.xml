@@ -133,12 +133,14 @@
                 android:layout_margin="5dp"
                 >
                 <Button
+                    android:id="@+id/update"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/update"/>
 
                 <Button
+                    android:id="@+id/delete"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

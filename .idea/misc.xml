@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/FakeStore/FakeStore/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/FakeStore/FakeStore/app/src/main/res/layout/card_product_details.xml" value="0.16666666666666666" />
+        <entry key="..\:/FakeStore/FakeStore/app/src/main/res/layout/fragment_add_product.xml" value="0.16666666666666666" />
         <entry key="..\:/FakeStore/app/src/main/res/drawable/ic_baseline_add_product.xml" value="0.175" />
         <entry key="..\:/FakeStore/app/src/main/res/layout/activity_main.xml" value="0.17255434782608695" />
         <entry key="..\:/FakeStore/app/src/main/res/layout/card_category.xml" value="0.17255434782608695" />

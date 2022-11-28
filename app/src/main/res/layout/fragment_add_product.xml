@@ -37,16 +37,17 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:padding="5dp"
                 android:text="@string/titleFront"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
+                android:id="@+id/addTitle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:hint="@string/enter_title"
                 android:padding="5dp"
@@ -64,16 +65,17 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:padding="5dp"
                 android:text="@string/price"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
+                android:id="@+id/addPrice"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:hint="@string/enter_price"
                 android:padding="5dp"
@@ -88,16 +90,17 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:padding="5dp"
                 android:text="@string/description"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
+                android:id="@+id/addDescription"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:hint="@string/enter_description"
                 android:padding="5dp"
@@ -115,18 +118,18 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:padding="5dp"
                 android:text="@string/category"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/addCategory"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:hint="@string/enter_category"
                 android:padding="5dp"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -139,23 +142,25 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:padding="5dp"
-                android:text="@string/titleFront"
+                android:text="@string/image_url"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
+                android:id="@+id/addImage"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:hint="@string/enter_title"
+                android:hint="@string/enter_image_url"
                 android:padding="5dp"
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>
             <Button
+                android:id="@+id/addButtton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Add"

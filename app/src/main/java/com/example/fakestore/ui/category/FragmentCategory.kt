@@ -53,10 +53,14 @@ class FragmentCategory : Fragment() {
         mViewModel = ViewModelProvider(requireActivity())[MainActivityViewModel::class.java]
 
         mViewModel?.products?.observe(viewLifecycleOwner, productObserver)
+        mViewModel?.message?.observe(viewLifecycleOwner, messageObserver)
         mViewModel.fetchProducts()
         userAlertClient.showWaitDialog("Fetching Products...")
 
 
+    }
+    private var messageObserver : Observer<String> = Observer{
+        userAlertClient.showDialogMessage("Error",it,false)
     }
     private var productObserver: Observer<ArrayList<Product>> = Observer {
         val products = it as ArrayList<Product>
